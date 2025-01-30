@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qwan Sterling's Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Qwan Sterling's Personal Website</h1>
+    </header>
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>Hello! I'm Qwan Sterling, a Computer Science Information Technology student at the University of North Carolina Charlotte. I enjoy watching sports, playing video games, and reading religious books.</p>
+        </section>
+        <section>
+            <h2>Professional Background</h2>
+            <p>I currently work in healthcare as a surgical equipment specialist, ensuring that surgical instruments are properly sterilized, maintained, and ready for use.</p>
+        </section>
+        <section>
+            <h2>Academic Background</h2>
+            <p>I'm pursuing a B.A. in Computer Science Information Technology at the University of North Carolina Charlotte.</p>
+        </section>
+        <section>
+            <h2>Programming/Software Background</h2>
+            <p>I have moderate experience in Java, JavaScript, some C++, and Unity game development.</p>
+        </section>
+        <section>
+            <h2>Courses I'm Taking & Why</h2>
+            <ul>
+                <li><strong>ITCS 4180 - Mobile Application Development:</strong> It's part of my technical elective courses.</li>
+                <li><strong>ITIS 3135 - Web Design and Development:</strong> It's part of my degree major.</li>
+                <li><strong>ITSC 2600 - CS Program Career Course:</strong> It's part of my degree major.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Also Like to Share</h2>
+            <p>I'm a hardcore gamer with a passion for learning the history of video game development and software design.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Qwan Sterling</p>
+    </footer>
+</body>
+</html>
