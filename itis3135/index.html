@@ -12,11 +12,11 @@
       background-color: #f9f9f9;
       text-align: center;
     }
-
     header {
       background-color: #333;
       color: white;
-      padding: 10px;
+      padding: 20px 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
     header h1 {
       margin: 0;
@@ -29,6 +29,10 @@
     }
     nav a:hover {
       text-decoration: underline;
+    }
+    .active {
+      font-weight: bold;
+      color: #0056b3;
     }
     main {
       padding: 20px;
@@ -48,24 +52,55 @@
     footer a:hover {
       text-decoration: underline;
     }
+    iframe {
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
   </style>
- <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <!-- Accumulus Script -->
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
     <h1>Qwan Sterling's Webpage</h1>
     <nav>
       <a href="page1.html">Page 1</a>
-      <a href="page2.html">Page 2</a>
+      <a href="page2.html" class="active">Page 2</a>
       <a href="page3.html">Page 3</a>
     </nav>
   </header>
   <main>
     <h2>Welcome</h2>
-    <p>Welcome to Qwan Sterling's personal webpage. Explore the links above to navigate!</p>
+    <p>
+      Hello! My name is Qwan Sterling, a student at UNC Charlotte pursuing a degree in IT. I enjoy coding, gaming, and learning about technology.
+    </p>
+
+    <h3>Check Out My GitHub Projects</h3>
+    <iframe 
+      src="https://qsterling21.github.io/qsterling.github.io/" 
+      width="90%" 
+      height="400px" 
+      style="border: none;">
+    </iframe>
+
+    <h3>Other Links</h3>
+    <ul>
+      <li><a href="https://qsterling21.github.io/qsterling.github.io/" target="_blank">My GitHub Page</a></li>
+      <li><a href="https://webpages.charlotte.edu/qsterlin/itis3135/" target="_blank">My Live Webpage</a></li>
+      <li><a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME/" target="_blank">My LinkedIn Profile</a></li>
+    </ul>
   </main>
   <footer>
-    <p>Click to link: <a href="https://webpages.charlotte.edu/qsterlin/" target="_blank">https://webpages.charlotte.edu/qsterlin/</a></p>
+    <p>Click to visit my project: 
+      <a href="https://webpages.charlotte.edu/qsterlin/itis3135/" target="_blank">Qwan Sterling's Webpage</a>
+    </p>
   </footer>
 </body>
 </html>
