@@ -1,19 +1,34 @@
-# Welcome to Qwan Sterling's GitHub Page!
+# Welcome to Qwan Sterling's GitHub Page! 🚀
 
-This is the repository for my personal website hosted on GitHub Pages: [qsterling.github.io](https://qsterling.github.io/).
+This is the repository for my personal website hosted on **GitHub Pages**:  
+🔗 **[qsterling21.github.io](https://qsterling21.github.io/)**  
 
-## About This Site
-This site was created as part of the ITIS3135 course to showcase my projects and work. It includes:
-- **Home Page**: Introduction to the website.
-- **Other Pages**: Links to additional content and resources.
+---
 
-## Features
-- Responsive design
-- Easy navigation
-- Hosted on GitHub Pages
+## 📌 About This Site
+This site was created as part of the **ITIS3135 Web Design and Development** course to showcase my projects and coursework.  
 
-## How to Access
-Visit the website at: [https://qsterling.github.io/](https://qsterling.github.io/)
+### 🌟 **Key Sections**
+- **🏠 Home Page** – Introduction and overview of my work.
+- **📜 Other Pages** – Links to additional content and resources.
+
+---
+
+## ✨ Features
+✅ Responsive Design  
+✅ Easy Navigation  
+✅ Hosted on **GitHub Pages**  
+
+---
+
+## 🔍 How to Access
+Visit the live website here:  
+👉 [**qsterling21.github.io**](https://qsterling21.github.io/)  
+
+---
+
+## 📂 Repository Structure
+Here's how the project is organized:
 
 ## Repository Structure
 Here’s how the repository is organized:
