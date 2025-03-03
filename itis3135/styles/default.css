@@ -1,4 +1,71 @@
+/* Google Doc Webpage Photo */
 img{
 
     width: 20%;
+}
+
+
+
+/* Bootstrap Grid System & Custom Styles */
+.container {
+    max-width: 1200px; /* Limits content width */
+    width: 90%; /* Adjusts width dynamically */
+    margin: 0 auto; /* Centers content */
+}
+
+/* Styling for main content */
+main {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Colorbox Example */
+#colorbox {
+    height: 200px;
+    width: 200px;
+    background: blue;
+    margin: 50px auto;
+}
+
+/* Responsive Design using Bootstrap's Media Queries */
+
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    main {
+        width: 95%;
+    }
+    #colorbox {
+        background-color: yellow;
+    }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    main {
+        width: 80%;
+    }
+    #colorbox {
+        background-color: orange;
+    }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    main {
+        width: 70%;
+    }
+    #colorbox {
+        background-color: red;
+    }
+}
+
+/* Extra Large Devices (1200px and up) */
+@media (min-width: 1200px) {
+    main {
+        width: 60%;
+    }
+    #colorbox {
+        background-color: green;
+    }
 }
