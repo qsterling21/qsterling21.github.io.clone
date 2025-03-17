@@ -50,43 +50,43 @@ section {
 
 /* 🎨 Unique Colors for Each Section */
 
-/* Home section */
+/* Home section (Stays Dark Blue) */
 #home {
   background-color: #1e2a38; /* Dark Blue */
   color: #f0f0f0; /* Light Text */
 }
 
-/* About Me section */
+/* About Me - Changed to Purple */
 #about {
-  background-color: #2c3e50; /* Navy */
+  background-color: #6a0dad; /* Deep Purple */
   color: #ecf0f1; /* Off-white text */
 }
 
-/* Best Times section */
+/* Best Times - Changed to Purple */
 #time {
-  background-color: #34495e; /* Deep Gray-Blue */
+  background-color: #7d3c98; /* Medium Purple */
   color: #ffffff; /* White text */
 }
 
-/* Top Locations section */
-#locations {
-  background-color: #22303c; /* Dark Cyan */
-  color: #f1c40f; /* Yellow text */
+/* Great Location (Top Locations) - Changed to Green */
+#location {
+  background-color: #196f3d; /* Dark Green */
+  color: #f1f1f1; /* Light Text */
 }
 
-/* How-To section */
+/* How-To Section - Changed to Purple */
 #how {
-  background-color: #2e4053; /* Dark Steel Blue */
-  color: #a29bfe; /* Soft Purple */
+  background-color: #8e44ad; /* Vibrant Purple */
+  color: #e0dcec; /* Light Gray Text */
 }
 
-/* Why Play section */
+/* Why Play - Changed to Green */
 #why {
-  background-color: #1b263b; /* Deep Blue */
-  color: #ff7675; /* Light Red */
+  background-color: #229954; /* Rich Green */
+  color: #ffebcd; /* Light Beige */
 }
 
-/* AI Prompts section */
+/* AI Prompts section (Stays Dark Purple) */
 #ai {
   background-color: #4a4e69; /* Dark Purple */
   color: #dcdde1; /* Light Gray */
@@ -147,6 +147,5 @@ footer img {
   margin: 0 5px;
   vertical-align: middle;
 }
-
 
   
