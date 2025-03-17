@@ -15,8 +15,8 @@
     <nav>
       <a href="#" onclick="showSection('home')">Home</a> |
       <a href="#" onclick="showSection('about')">About Me</a> |
-      <a href="#" onclick="showSection('times')">Best Times</a> |
-      <a href="#" onclick="showSection('locations')">Top Locations</a> |
+      <a href="#" onclick="showSection('online')">Multiplayer</a> |
+      <a href="#" onclick="showSection('top_games')">Top Games</a> |
       <a href="#" onclick="showSection('how')">How-To</a> |
       <a href="#" onclick="showSection('why')">Why Play?</a> |
       <a href="#" onclick="showSection('ai')">AI Prompts</a>
@@ -44,7 +44,7 @@
       <p>My favorite games growing up as a kid and being an adult .</p>
     </section>
 
-    <section id="times">
+    <section id="online">
       <h2>Online Multiplayer</h2>
       <p>Evenings and weekends are ideal for gaming, providing time to unwind and relax.</p>
       <figure>
@@ -57,11 +57,11 @@
       </ul>
     </section>
 
-    <section id="locations">
+    <section id="top_games">
       <h2>2025 Top Games</h2>
       <p>These are tsome of the biggest games coming out this year.</p>
       <figure>
-        <img src="image/Top_Locations_Gaming_Picture.webp" alt="Upoming Games">
+        <img src="image/Top_Locations_Gaming_Picture.webp" alt="Upcoming Games">
         <figcaption>These are some of the biggest games coming out this year.</figcaption>
       </figure>
       <p>I also connect frequently with friends online.</p>
@@ -107,11 +107,11 @@
 
   <script>
     function showSection(sectionId) {
-      document.querySelectorAll('main section').forEach(sec => {
+      document.querySelectorAll('main section').forEach((sec) => {
         sec.style.display = sec.id === sectionId ? 'block' : 'none';
       });
     }
     showSection('home');
-  </script>
+    </script>    
 </body>
 </html>
