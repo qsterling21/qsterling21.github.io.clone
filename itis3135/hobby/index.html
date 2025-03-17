@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playing Video Games</title>
+  <link rel="icon" type="image/png" href="image/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Playing Video Games</h1>
+    <nav>
+      <a href="#" onclick="showSection('home')">Home</a> |
+      <a href="#" onclick="showSection('about')">About Me</a> |
+      <a href="#" onclick="showSection('times')">Best Times</a> |
+      <a href="#" onclick="showSection('locations')">Top Locations</a> |
+      <a href="#" onclick="showSection('how')">How-To</a> |
+      <a href="#" onclick="showSection('why')">Why Play?</a> |
+      <a href="#" onclick="showSection('ai')">AI Prompts</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Welcome to Gaming!</h2>
+      <p>Video gaming offers interactive entertainment and exciting adventures through various worlds and stories.</p>
+      <figure>
+        <img src="image/Home_Gaming_Picture.webp" alt="Home Gaming">
+        <figcaption>My favorite gaming adventures await!</figcaption>
+      </figure>
+      <p>I enjoy playing action, adventure, and role-playing games.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I've been gaming since childhood, and it remains one of my greatest passions.</p>
+      <figure>
+        <img src="image/About_Main_Gaming_Picture.jpg" alt="Gamer Avatar">
+        <figcaption>This is my virtual gaming avatar.</figcaption>
+      </figure>
+      <p>My favorite gaming setup includes my PC and gaming peripherals.</p>
+    </section>
+
+    <section id="times">
+      <h2>Ideal Gaming Times</h2>
+      <p>Evenings and weekends are ideal for gaming, providing time to unwind and relax.</p>
+      <figure>
+        <img src="image/BestTime_Gaming_Picture.jpg" alt="Night Gaming Setup">
+        <figcaption>Late-night gaming is my preferred time.</figcaption>
+      </figure>
+      <ul>
+        <li>Weekdays: 7 PM - 11 PM</li>
+        <li>Weekends: Flexible hours</li>
+      </ul>
+    </section>
+
+    <section id="locations">
+      <h2>Top Gaming Spots</h2>
+      <p>I mainly enjoy gaming at home, where I've created a comfortable and immersive setup.</p>
+      <figure>
+        <img src="image/Top_Locations_Gaming_Picture.webp" alt="Dream Gaming Room">
+        <figcaption>My dream gaming setup.</figcaption>
+      </figure>
+      <p>I also connect frequently with friends online.</p>
+    </section>
+
+    <section id="how">
+      <h2>How to Start Gaming</h2>
+      <p>Getting into gaming is easy—start by choosing simple games to get comfortable with controls.</p>
+      <figure>
+        <img src="image/HowToPlay.webp" alt="Controller Guide">
+        <figcaption>A helpful guide to understanding gaming controllers.</figcaption>
+      </figure>
+      <ul>
+        <li>Choose user-friendly games</li>
+        <li>Practice regularly to build skills</li>
+      </ul>
+    </section>
+
+    <section id="why">
+      <h2>Why Play Games?</h2>
+      <p>Gaming is beneficial as it improves social connections, problem-solving skills, and helps relieve stress.</p>
+      <figure>
+        <img src="image/About_Gaming_Picture.jpeg" alt="Happy Gamer">
+        <figcaption>Gaming brings happiness and relaxation.</figcaption>
+      </figure>
+      <p>It significantly enhances my quality of life.</p>
+    </section>
+
+    <section id="ai">
+      <h2>AI Prompts Used</h2>
+      <p><em>"A cozy nighttime gaming setup illuminated by neon RGB lights."</em></p>
+      <p><em>"A futuristic gamer avatar with high-tech gear."</em></p>
+      <p><em>"A vibrant, immersive video game world."</em></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Designed by <a href="link-to-design-firm">Your Design Firm</a></p>
+    <a href="https://validator.w3.org/"><img src="image/html_validation.png" alt="HTML Validation"></a>
+    <a href="https://jigsaw.w3.org/css-validator/"><img src="image/css_validation.png" alt="CSS Validation"></a>
+    <a href="https://wave.webaim.org/report#/your-link"><img src="image/button_validation_wcag-1.png" alt="Accessibility Validation"></a>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('main section').forEach(sec => {
+        sec.style.display = sec.id === sectionId ? 'block' : 'none';
+      });
+    }
+    showSection('home');
+  </script>
+</body>
+</html>
