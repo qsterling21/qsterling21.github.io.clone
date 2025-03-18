@@ -1,7 +1,7 @@
 # Welcome to Qwan Sterling's GitHub Page! 🚀
 
 This is the repository for my personal website hosted on **GitHub Pages**:  
-🔗 **[qsterling21.github.io](https://qsterling21.github.io/itis3135/z_archives/#)**  
+🔗 **[qsterling21.github.io](https://github.com/qsterling21/qsterling21.github.io)**  
 
 ---
 
