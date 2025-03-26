@@ -1,0 +1,67 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d1117; /* Black with slight blue tint */
+    color: #c9d1d9; /* Light gray text */
+}
+
+/* Header */
+header {
+    background-color: #1f6feb; /* Bright blue */
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Main Section */
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Headings */
+h2 {
+    color: #58a6ff;
+}
+
+/* Paragraph */
+p {
+    font-size: 1.1rem;
+    color: #dcdcdc;
+}
+
+/* Navigation Links */
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #58a6ff;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #1f6feb;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #161b22;
+    color: #8b949e;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
