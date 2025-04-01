@@ -21,6 +21,8 @@ $(document).ready(function() {
                 $('#booking-form').show();   // Show the form again
                 $('#booking-form')[0].reset(); // Reset the form fields
             });
+        } else {
+            alert('Please fill in all required fields with valid information.');
         }
     });
 
@@ -30,11 +32,13 @@ $(document).ready(function() {
         const checkIn = $('#check-in').val();
         const checkOut = $('#check-out').val();
 
+        // Check if all fields are filled and the email is valid
         if (!$('#name').val() || !validateEmail(email) || !checkIn || !checkOut) {
             alert('Please fill in all required fields with valid information.');
             isValid = false;
         }
 
+        // Ensure the check-out date is after the check-in date
         if (isValid && new Date(checkIn) >= new Date(checkOut)) {
             alert('Check-out date must be after the check-in date.');
             isValid = false;
