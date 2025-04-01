@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Accommodation</title>
+    <link rel="stylesheet" href="../styles/booking.css">
+</head>
+<body>
+    <header>
+        <h1>Book Your Accommodation</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="listings.html">Listings</a></li>
+                <li><a href="booking.html" class="active">Book Accommodation</a></li>
+                <li><a href="map.html">Map View</a></li>
+                <li><a href="deals.html">Special Deals</a></li>
+                <li><a href="profile.html">Your Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form id="booking-form" action="#" method="post">
+            <fieldset>
+                <legend>Book Your Stay</legend>
+                
+                <label for="hotel-select">Choose a Hotel:</label>
+                <select id="hotel-select" name="hotel">
+                    <option value="The Durham Hotel">The Durham Hotel, Durham</option>
+                    <option value="The Ivey's Hotel">The Ivey's Hotel, Charlotte</option>
+                    <option value="Aloft Raleigh">Aloft Raleigh, Raleigh</option>
+                    <option value="Hyatt Place Asheville">Hyatt Place Asheville/Downtown, Asheville</option>
+                    <option value="Renaissance Raleigh">Renaissance Raleigh North Hills Hotel, Raleigh</option>
+                </select>
+
+                <label for="check-in">Check-in Date:</label>
+                <input type="date" id="check-in" name="checkin">
+
+                <label for="check-out">Check-out Date:</label>
+                <input type="date" id="check-out" name="checkout">
+
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <button type="submit">Submit Booking</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Traveling Nurses Accommodation Finder. All rights reserved.</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/booking.js"></script> <!-- Link to your JavaScript file for booking -->
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map View of Hotels</title>
+    <link rel="stylesheet" href="styles/map_style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Map of Hotels</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="listings.html">Listings</a></li>
+                <li><a href="booking.html">Book Accommodation</a></li>
+                <li><a href="map.html" class="active">Map View</a></li>
+                <li><a href="deals.html">Special Deals</a></li>
+                <li><a href="profile.html">Your Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="map"></div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Traveling Nurses Accommodation Finder. All rights reserved.</p>
+    </footer>
+    <script>
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 7,
+                center: {lat: 35.2271, lng: -80.8431}, // Center the map at a relevant location (e.g., Charlotte, NC)
+            });
+
+            // Array of hotel data
+            const hotels = [
+                {lat: 35.9940, lng: -78.8986, name: "The Durham Hotel"}, // Durham
+                {lat: 35.2271, lng: -80.8431, name: "The Ivey's Hotel"}, // Charlotte
+                {lat: 35.7796, lng: -78.6382, name: "Aloft Raleigh"}, // Raleigh
+                {lat: 35.5951, lng: -82.5515, name: "Hyatt Place Asheville"}, // Asheville
+                {lat: 35.8437, lng: -78.6438, name: "Renaissance Raleigh"} // Raleigh North Hills
+            ];
+
+            // Loop through hotels and place markers
+            hotels.forEach(function(hotel) {
+                new google.maps.Marker({
+                    position: {lat: hotel.lat, lng: hotel.lng},
+                    map: map,
+                    title: hotel.name
+                });
+            });
+        }
+    </script>
+    <!-- Load jQuery if needed for other functionalities -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="scripts/map.js"></script> <!-- Link to your JavaScript file for map functionalities -->
+</body>
+</html>
