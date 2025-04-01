@@ -57,6 +57,26 @@
         <p>&copy; 2025 Traveling Nurses Accommodation Finder. All rights reserved.</p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="scripts/booking.js"></script> <!-- Link to your JavaScript file for booking -->
+    <script>
+        $(document).ready(function() {
+            function getQueryVariable(variable) {
+                var query = window.location.search.substring(1);
+                var vars = query.split('&');
+                for (var i = 0; i < vars.length; i++) {
+                    var pair = vars[i].split('=');
+                    if (decodeURIComponent(pair[0]) == variable) {
+                        return decodeURIComponent(pair[1]);
+                    }
+                }
+                return false;
+            }
+
+            // Pre-populate the hotel selection if a query parameter is provided
+            var hotel = getQueryVariable('hotel');
+            if (hotel) {
+                $('#hotel-select').val(hotel);
+            }
+        });
+    </script>
 </body>
 </html>

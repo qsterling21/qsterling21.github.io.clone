@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Map View of Hotels</title>
-    <link rel="stylesheet" href="styles/map_style.css">
+    <link rel="stylesheet" href="../styles/map_style.css"> <!-- Link to your CSS file --> 
+   
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         #map {
@@ -33,14 +34,15 @@
     <footer>
         <p>&copy; 2025 Traveling Nurses Accommodation Finder. All rights reserved.</p>
     </footer>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-        function initMap() {
-            const map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 7,
-                center: {lat: 35.2271, lng: -80.8431}, // Center the map at a relevant location (e.g., Charlotte, NC)
-            });
+        document.addEventListener('DOMContentLoaded', function() {
+            const map = L.map('map').setView([35.2271, -80.8431], 10); // Center the map and set the zoom level
 
-            // Array of hotel data
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+
             const hotels = [
                 {lat: 35.9940, lng: -78.8986, name: "The Durham Hotel"}, // Durham
                 {lat: 35.2271, lng: -80.8431, name: "The Ivey's Hotel"}, // Charlotte
@@ -49,18 +51,13 @@
                 {lat: 35.8437, lng: -78.6438, name: "Renaissance Raleigh"} // Raleigh North Hills
             ];
 
-            // Loop through hotels and place markers
-            hotels.forEach(function(hotel) {
-                new google.maps.Marker({
-                    position: {lat: hotel.lat, lng: hotel.lng},
-                    map: map,
-                    title: hotel.name
-                });
+            hotels.forEach(hotel => {
+                L.marker([hotel.lat, hotel.lng]).addTo(map)
+                    .bindPopup(`<b>${hotel.name}</b>`)
+                    .on('click', () => console.log(`Marker for ${hotel.name} clicked!`));
             });
-        }
+        });
     </script>
-    <!-- Load jQuery if needed for other functionalities -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="scripts/map.js"></script> <!-- Link to your JavaScript file for map functionalities -->
 </body>
 </html>
+

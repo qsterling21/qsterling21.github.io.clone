@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../styles/deals.css"> <!-- Link to your CSS file -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- jQuery for AJAX calls -->
     <script src="scripts/deals.js" defer></script> <!-- Link to your JavaScript file for deals -->
+    
+
 </head>
 <body>
     <header>
@@ -23,22 +25,24 @@
         </nav>
     </header>
     <main>
-        <section id="deals">
+    
+        <section id="deals-slider" class="slider">
+            <h2>Current Special Deals</h2>
             <div class="deal">
                 <h3>Weekend Getaway Special at The Durham Hotel</h3>
                 <p>Enjoy a 20% discount on weekend stays this month. Perfect for a relaxing weekend near the historic sites of Durham.</p>
                 <p>Valid through: July 31, 2025</p>
-                <button>Book Now</button>
+                <button class="book-btn" data-hotel="The Durham Hotel" data-discount="20">Book Now</button>
             </div>
             <div class="deal">
                 <h3>Extended Stay Discount at Aloft Raleigh</h3>
                 <p>Stay for more than 7 nights and receive a 25% discount. Ideal for longer assignments or projects.</p>
                 <p>Valid through: August 31, 2025</p>
-                <button>Book Now</button>
+                <button class="book-btn" data-hotel="Aloft Raleigh" data-discount="25">Book Now</button>
             </div>
-            <!-- More deals can be added here -->
         </section>
     </main>
+    
     <footer>
         <p>&copy; 2025 Traveling Nurses Accommodation Finder. All rights reserved.</p>
     </footer>

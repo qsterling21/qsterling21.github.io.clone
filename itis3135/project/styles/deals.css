@@ -1,22 +1,28 @@
+/* General styling for deal cards */
 .deal {
     background-color: #fff;
     padding: 20px;
-    margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px; /* Adjust based on content */
 }
 
 .deal h3 {
-    color: #0056b3;
+    color: #0056b3; /* Maintains the blue color for headings */
 }
 
 .deal p {
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.5; /* Ensures text within deals is readable */
 }
 
+/* Styling for all buttons within deals */
 button {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green background for buttons */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -26,5 +32,21 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Darker green on hover for visual feedback */
+}
+
+button:focus {
+    outline: none; /* Removes outline to keep style clean, consider accessibility */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .deal {
+        min-height: 150px; /* Smaller height on smaller screens */
+    }
+
+    button {
+        padding: 8px 16px; /* Slightly smaller padding for buttons on smaller screens */
+        font-size: 14px; /* Smaller font size for buttons */
+    }
 }
