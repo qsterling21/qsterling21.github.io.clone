@@ -1,86 +1,108 @@
-<main>
-    <h2>BYO Intro</h2>
-    <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
-    <link rel="stylesheet" href="styles/default.css.css
-    ">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Qwan "Quick Stork" Sterling | BYO Intro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/default.css" type="text/css">
+</head>
+<body>
 
-    <form id="introForm">
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" required>
+    <!-- Website Header Include -->
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h2>BYO Intro</h2>
+
+        <!-- Div Class contain addition information-->
+        <div class="section-header">
+            Time to BYO Intro page, please fill out the form below so we can create your own page.
         </div>
+        
 
-        <div class="form-group">
-            <label for="mascot">Mascot:</label>
-            <input type="text" id="mascot" required>
-        </div>
+        <form id="introForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
 
-        <div class="form-group">
-            <label for="image">Image:</label>
-            <input type="file" id="image" accept="image/png, image/jpg">
-        </div>
+            <div class="form-group">
+                <label for="mascot">Mascot:</label>
+                <input type="text" id="mascot" required>
+            </div>
 
-        <div class="form-group">
-            <label for="caption">Image Caption:</label>
-            <input type="text" id="caption">
-        </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="file" id="image" accept="image/png, image/jpg">
+            </div>
 
-        <div class="form-group">
-            <label for="personalBackground">Personal Background:</label>
-            <textarea id="personalBackground"></textarea>
-        </div>
+            <div class="form-group">
+                <label for="caption">Image Caption:</label>
+                <input type="text" id="caption">
+            </div>
 
-        <div class="form-group">
-            <label for="professionalBackground">Professional Background:</label>
-            <textarea id="professionalBackground"></textarea>
-        </div>
+            <div class="form-group">
+                <label for="personalBackground">Personal Background:</label>
+                <textarea id="personalBackground"></textarea>
+            </div>
 
-        <div class="form-group">
-            <label for="academicBackground">Academic Background:</label>
-            <textarea id="academicBackground"></textarea>
-        </div>
+            <div class="form-group">
+                <label for="professionalBackground">Professional Background:</label>
+                <textarea id="professionalBackground"></textarea>
+            </div>
 
-        <div class="form-group">
-            <label for="webDevBackground">Background in Web Development:</label>
-            <textarea id="webDevBackground"></textarea>
-        </div>
+            <div class="form-group">
+                <label for="academicBackground">Academic Background:</label>
+                <textarea id="academicBackground"></textarea>
+            </div>
 
-        <div class="form-group">
-            <label for="primaryPlatform">Primary Computer Platform:</label>
-            <input type="text" id="primaryPlatform">
-        </div>
+            <div class="form-group">
+                <label for="webDevBackground">Background in Web Development:</label>
+                <textarea id="webDevBackground"></textarea>
+            </div>
 
-        <div class="form-group">
-            <label>Courses currently taking:</label>
-            <button type="button" onclick="addCourse()">Add Course</button>
-            <div id="courseList"></div>
-        </div>
+            <div class="form-group">
+                <label for="primaryPlatform">Primary Computer Platform:</label>
+                <input type="text" id="primaryPlatform">
+            </div>
 
-        <div class="form-group">
-            <label for="funnyThing">Funny thing?</label>
-            <input type="text" id="funnyThing">
-        </div>
+            <div class="form-group">
+                <label>Courses currently taking:</label>
+                <button type="button" onclick="addCourse()">Add Course</button>
+                <div id="courseList"></div>
+            </div>
 
-        <div class="form-group">
-            <label for="anythingElse">Anything else?</label>
-            <textarea id="anythingElse"></textarea>
-        </div>
+            <div class="form-group">
+                <label for="funnyThing">Funny thing?</label>
+                <input type="text" id="funnyThing">
+            </div>
 
-        <div class="form-group checkbox-group">
-            <input type="checkbox" id="agree" required>
-            <label for="agree">I understand that what is on this page is not password protected...</label>
-        </div>
+            <div class="form-group">
+                <label for="anythingElse">Anything else?</label>
+                <textarea id="anythingElse"></textarea>
+            </div>
 
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
-    </form>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="agree" required>
+                <label for="agree">I understand that what is on this page is not password protected...</label>
+            </div>
 
-    <footer>
-        <div data-include="components/footer.html"></div>
-    </footer>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
 
+        <!-- Footer Include -->
+        <footer>
+            <div data-include="components/footer.html"></div>
+        </footer>
+    </main>
+
+    <!-- Scripts -->
     <script src="scripts/survey.js"></script>
-    <script src="scripts/HTMLInclude.min.js"></script>    
-</main>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
 
 
