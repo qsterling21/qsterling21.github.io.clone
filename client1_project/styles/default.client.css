@@ -1,5 +1,5 @@
-/* Basic Reset */
-* {
+/* Basic Reset with safer selectors */
+html, body, h1, h2, h3, p, ul, li, nav, form, section, footer, input, select, textarea, button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,9 +11,9 @@ body {
     color: #333;
     line-height: 1.6;
     padding: 20px;
-    margin: 0;
 }
 
+/* Header styles */
 header {
     background: #007BFF;
     color: #ffffff;
@@ -21,12 +21,22 @@ header {
     text-align: center;
 }
 
-header h1 {
+h1 {
     margin: 0;
 }
 
+h1, h2, h3 {
+    color: #0056b3;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 10px;
+}
+
+/* Navigation styles */
 nav {
-    background: #0056b3;  /* Darker blue for better contrast */
+    background: #0056b3;
     padding: 10px 0;
     text-align: center;
 }
@@ -46,6 +56,17 @@ nav ul li a {
     font-weight: bold;
 }
 
+nav ul li a:hover,
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+/* Main area spacing */
+main {
+    margin-top: 20px;
+}
+
+/* Footer styles */
 footer {
     background: #333;
     color: white;
@@ -56,6 +77,7 @@ footer {
     width: 100%;
 }
 
+/* Links */
 a {
     color: #007BFF;
 }
@@ -64,10 +86,11 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Form styling */
+/* Form input styling */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+input[type="date"],
 select,
 textarea {
     width: 100%;
@@ -76,8 +99,10 @@ textarea {
     margin-bottom: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
+/* Button styling */
 input[type="submit"],
 button {
     background-color: #4CAF50;
@@ -107,7 +132,7 @@ button:hover {
     background-color: #FFD2D2;
 }
 
-/* Responsive design adjustments */
+/* Responsive styles */
 @media (max-width: 768px) {
     nav ul {
         text-align: center;

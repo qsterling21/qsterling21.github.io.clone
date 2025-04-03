@@ -1,14 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize the map on the 'map' div with a center and zoom level
-    var map = L.map('map').setView([35.2271, -80.8431], 10);
+    // Fix Leaflet marker image size warning
+    L.Icon.Default.mergeOptions({
+        iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+        shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png'
+    });
 
-    // Add OpenStreetMap tiles to the map
+    // Initialize map
+    const map = L.map('map').setView([35.2271, -80.8431], 10);
+
+    // Add OpenStreetMap tile layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap'
     }).addTo(map);
 
-    // Array of hotel data including latitude, longitude, and name
+    // Hotel locations
     const hotels = [
         {lat: 35.9940, lng: -78.8986, name: "The Durham Hotel"},
         {lat: 35.2271, lng: -80.8431, name: "The Ivey's Hotel"},
@@ -17,25 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
         {lat: 35.8437, lng: -78.6438, name: "Renaissance Raleigh"}
     ];
 
-    // Iterate over the hotels array to create and add markers to the map
-    hotels.forEach(function(hotel) {
-        var marker = L.marker([hotel.lat, hotel.lng]).addTo(map)
-            .bindPopup(`<b>${hotel.name}</b>`);  // Bind a popup with the hotel name
-
-        // Attach a click event listener to each marker
-        marker.on('click', function(e) {
-            handleMarkerClick(hotel);  // Handle click event by calling handleMarkerClick
-        });
+    // Add markers to the map
+    hotels.forEach((hotel) => {
+        L.marker([hotel.lat, hotel.lng])
+            .addTo(map)
+            .bindPopup(`<b>${hotel.name}</b>`)
+            .on('click', () => console.log(`Marker for ${hotel.name} clicked!`));
     });
-
-    // Function to handle marker click events
-    function handleMarkerClick(hotel) {
-        console.log(`Marker for ${hotel.name} clicked!`);
-        // This function could be expanded to display detailed information in a sidebar
-        // or open a modal window with more details about the hotel
-    }
 });
-// This code initializes a Leaflet map, adds OpenStreetMap tiles, and places markers for hotels in North Carolina.
-// Each marker has a popup with the hotel name, and clicking a marker logs the hotel name to the console.
 
 
