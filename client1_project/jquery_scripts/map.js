@@ -25,11 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add markers to the map
     hotels.forEach((hotel) => {
-        L.marker([hotel.lat, hotel.lng])
-            .addTo(map)
+        L.marker([hotel.lat, hotel.lng]).addTo(map)
             .bindPopup(`<b>${hotel.name}</b>`)
-            .on('click', () => console.log(`Marker for ${hotel.name} clicked!`));
+            .on('click', () => {
+                console.log(`Marker for ${hotel.name} clicked!`);
+            });
     });
 });
-
-
