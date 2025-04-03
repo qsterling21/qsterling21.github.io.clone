@@ -11,9 +11,10 @@
     min-height: 200px; /* Adjust based on content */
 }
 
-.deal h3 {
-    color: #0056b3; /* Maintains the blue color for headings */
+.deal-heading {
+    color: #0056b3;
 }
+
 
 .deal p {
     font-size: 16px;
@@ -36,8 +37,10 @@ button:hover {
 }
 
 button:focus {
-    outline: none; /* Removes outline to keep style clean, consider accessibility */
+    outline: 2px dashed #222; /* or use box-shadow for more style */
+    outline-offset: 3px;
 }
+
 
 /* Responsive design adjustments */
 @media (max-width: 768px) {

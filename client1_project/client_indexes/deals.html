@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Special Deals</title>
-    <link rel="stylesheet" href="../styles/deals.css"> <!-- Link to your CSS file -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- jQuery for AJAX calls -->
-    <script src="scripts/deals.js" defer></script> <!-- Link to your JavaScript file for deals -->
-    
-
+    <link rel="stylesheet" href="../styles/deals.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -25,29 +22,40 @@
             </ul>
         </nav>
     </header>
+
     <main>
-    
-        <section id="deals-slider" class="slider">
-            <h2>Current Special Deals</h2>
+        <section id="deals">
             <div class="deal">
-                <h3>Weekend Getaway Special at The Durham Hotel</h3>
+                <h3 class="deal-heading">Weekend Getaway Special at The Durham Hotel</h3>
                 <p>Enjoy a 20% discount on weekend stays this month. Perfect for a relaxing weekend near the historic sites of Durham.</p>
                 <p>Valid through: July 31, 2025</p>
                 <button class="book-btn" data-hotel="The Durham Hotel" data-discount="20">Book Now</button>
             </div>
             <div class="deal">
-                <h3>Extended Stay Discount at Aloft Raleigh</h3>
+                <h3 class="deal-heading">Extended Stay Discount at Aloft Raleigh</h3>
                 <p>Stay for more than 7 nights and receive a 25% discount. Ideal for longer assignments or projects.</p>
                 <p>Valid through: August 31, 2025</p>
                 <button class="book-btn" data-hotel="Aloft Raleigh" data-discount="25">Book Now</button>
             </div>
         </section>
     </main>
-    
+
     <footer>
         <p>&copy; 2025 Traveling Nurses Accommodation Finder. All rights reserved.</p>
-        Validate HTML: <a href="https://validator.w3.org/" target="_blank">HTML Validator</a><br>
-        Validate CSS: <a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS Validator</a>
+        <p>
+            <a href="https://validator.w3.org/check?uri=referer" target="_blank">
+                <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML!" height="31" width="88" />
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" height="31" width="88" />
+            </a>
+        </p>
     </footer>
+
+    <!-- Link to your JavaScript file for deals -->
+    <script src="../jquery_scripts/deals.js"></script>
+
+    <!-- Accumulus page script (optional) -->
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,56 +1,72 @@
-$(document).ready(function() {
-    $('#booking-form').submit(function(event) {
-        event.preventDefault(); // Prevent the default form submission
+$(document).ready(function () {
+    // Helper function to get query parameters from URL
+    function getQueryVariable(variable) {
+        const query = window.location.search.substring(1);
+        const vars = query.split("&");
 
-        // Validate the required inputs to ensure they are not empty and correctly formatted
+        for (let i = 0; i < vars.length; i++) {
+            const pair = vars[i].split("=");
+            if (decodeURIComponent(pair[0]) === variable) {
+                return decodeURIComponent(pair[1]);
+            }
+        }
+        return null;
+    }
+
+    // Pre-fill hotel dropdown from deals.html query param
+    const hotel = getQueryVariable("hotel");
+    if (hotel) {
+        $("#hotel-select").val(hotel);
+    }
+
+    // Handle form submission
+    $("#booking-form").submit(function (event) {
+        event.preventDefault(); // Prevent default form action
+
         if (validateForm()) {
-            // Hide the form to display the confirmation message
-            $(this).hide();
+            $(this).hide(); // Hide the form
 
-            // Append a confirmation message to the 'main' element
-            $('main').append(`
+            // Show confirmation
+            $("main").append(`
                 <div id="confirmation" style="padding: 10px; background-color: #f4f4f4; border: 1px solid #ccc; margin-top: 20px; text-align: center;">
-                    <p>Booking complete! Your stay is booked from <strong>${$('#check-in').val()}</strong> to <strong>${$('#check-out').val()}</strong>.</p>
+                    <p>Booking complete! Your stay is booked from <strong>${$("#check-in").val()}</strong> to <strong>${$("#check-out").val()}</strong>.</p>
                     <button id="cancelBooking" style="padding: 5px 10px; background-color: #dc3545; color: white; border: none; cursor: pointer;">Cancel</button>
                 </div>
             `);
 
-            // Event handler for the Cancel button
-            $('#cancelBooking').click(function() {
-                $('#confirmation').remove(); // Remove the confirmation message
-                $('#booking-form').show();   // Show the form again
-                $('#booking-form')[0].reset(); // Reset the form fields
+            // Cancel button handler
+            $("#cancelBooking").click(function () {
+                $("#confirmation").remove();
+                $("#booking-form").show();
+                $("#booking-form")[0].reset();
             });
         } else {
-            alert('Please fill in all required fields with valid information.');
+            alert("Please fill in all required fields with valid information.");
         }
     });
 
+    // Form validation
     function validateForm() {
-        let isValid = true;
-        const email = $('#email').val();
-        const checkIn = $('#check-in').val();
-        const checkOut = $('#check-out').val();
+        const name = $("#name").val().trim();
+        const email = $("#email").val().trim();
+        const checkIn = $("#check-in").val();
+        const checkOut = $("#check-out").val();
 
-        // Check if all fields are filled and the email is valid
-        if (!$('#name').val() || !validateEmail(email) || !checkIn || !checkOut) {
-            alert('Please fill in all required fields with valid information.');
-            isValid = false;
+        if (!name || !validateEmail(email) || !checkIn || !checkOut) {
+            return false;
         }
 
-        // Ensure the check-out date is after the check-in date
-        if (isValid && new Date(checkIn) >= new Date(checkOut)) {
-            alert('Check-out date must be after the check-in date.');
-            isValid = false;
+        if (new Date(checkIn) >= new Date(checkOut)) {
+            alert("Check-out date must be after check-in date.");
+            return false;
         }
 
-        return isValid;
+        return true;
     }
 
+    // Email format validation
     function validateEmail(email) {
-        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email.toLowerCase());
     }
 });
-
-
