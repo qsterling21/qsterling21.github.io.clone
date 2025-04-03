@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Accommodation</title>
-    <link rel="stylesheet" href="../styles/booking.css">
+    <link rel="stylesheet" href="../styles/booking.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../jquery_scripts/booking.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -21,51 +24,55 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <form id="booking-form" action="#" method="post">
             <fieldset>
                 <legend>Book Your Stay</legend>
-                
-                <label for="hotel-select">Choose a Hotel:</label>
-                <select id="hotel-select" name="hotel">
-                    <option value="The Durham Hotel">The Durham Hotel, Durham</option>
-                    <option value="The Ivey's Hotel">The Ivey's Hotel, Charlotte</option>
-                    <option value="Aloft Raleigh">Aloft Raleigh, Raleigh</option>
-                    <option value="Hyatt Place Asheville">Hyatt Place Asheville/Downtown, Asheville</option>
-                    <option value="Renaissance Raleigh">Renaissance Raleigh North Hills Hotel, Raleigh</option>
-                </select>
 
-                <label for="check-in">Check-in Date:</label>
-                <input type="date" id="check-in" name="checkin" required>
+                <div class="form-group">
+                    <label for="hotel-select">Choose a Hotel:</label>
+                    <select id="hotel-select" name="hotel">
+                        <option value="The Durham Hotel">The Durham Hotel, Durham</option>
+                        <option value="The Ivey's Hotel">The Ivey's Hotel, Charlotte</option>
+                        <option value="Aloft Raleigh">Aloft Raleigh, Raleigh</option>
+                        <option value="Hyatt Place Asheville">Hyatt Place Asheville/Downtown, Asheville</option>
+                        <option value="Renaissance Raleigh">Renaissance Raleigh North Hills Hotel, Raleigh</option>
+                    </select>
+                </div>
 
-                <label for="check-out">Check-out Date:</label>
-                <input type="date" id="check-out" name="checkout" required>
+                <div class="form-group">
+                    <label for="check-in">Check-in Date:</label>
+                    <input type="date" id="check-in" name="checkin" required />
+                </div>
 
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
+                <div class="form-group">
+                    <label for="check-out">Check-out Date:</label>
+                    <input type="date" id="check-out" name="checkout" required />
+                </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
 
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" />
+                </div>
 
                 <button type="submit">Submit Booking</button>
             </fieldset>
         </form>
     </main>
+
     <footer>
         <p>&copy; 2025 Traveling Nurses Accommodation Finder. All rights reserved.</p>
-    </footer>
-    
-    <script src="../jquery_scripts/booking.js"></script>
-   
-     
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
-   
         <p>
             <a href="https://validator.w3.org/check?uri=referer" target="_blank">
                 <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML!" height="31" width="88" />
@@ -74,27 +81,30 @@
                 <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" height="31" width="88" />
             </a>
         </p>
-    
-    Validate HTML: <a href="https://validator.w3.org/" target="_blank">HTML Validator</a><br>
-    Validate CSS: <a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS Validator</a>
+        <p>
+            Validate HTML: <a href="https://validator.w3.org/" target="_blank">HTML Validator</a><br />
+            Validate CSS: <a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS Validator</a>
+        </p>
+    </footer>
+
+    <!-- Fix the === operator warning -->
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             function getQueryVariable(variable) {
-                var query = window.location.search.substring(1);
-                var vars = query.split('&');
-                for (var i = 0; i < vars.length; i++) {
-                    var pair = vars[i].split('=');
-                    if (decodeURIComponent(pair[0]) == variable) {
+                const query = window.location.search.substring(1);
+                const vars = query.split("&");
+                for (let i = 0; i < vars.length; i++) {
+                    const pair = vars[i].split("=");
+                    if (decodeURIComponent(pair[0]) === variable) {
                         return decodeURIComponent(pair[1]);
                     }
                 }
                 return false;
             }
 
-            // Pre-populate the hotel selection if a query parameter is provided
-            var hotel = getQueryVariable('hotel');
+            const hotel = getQueryVariable("hotel");
             if (hotel) {
-                $('#hotel-select').val(hotel);
+                $("#hotel-select").val(hotel);
             }
         });
     </script>

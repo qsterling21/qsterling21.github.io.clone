@@ -31,9 +31,10 @@ nav ul li a {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.listing-item h3 {
+.section-heading {
     color: #007bff;
 }
+
 
 .listing-item p {
     margin: 5px 0;

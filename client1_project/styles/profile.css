@@ -1,11 +1,31 @@
+/* Apply box-sizing safely */
+html {
+    box-sizing: border-box;
+}
+
+body, section, form, input, button, div, p, h1, h2, h3, h4, h5, h6,
+::before, ::after {
+    box-sizing: inherit;
+}
+
+/* Base styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Profile section card */
 section {
     background-color: #fff;
     padding: 20px;
-    margin: 20px;
+    margin: 20px auto;
+    max-width: 700px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Form styling */
 form {
     max-width: 600px;
     margin: auto;
@@ -26,6 +46,7 @@ form input[type="tel"] {
     border-radius: 4px;
 }
 
+/* Button styling */
 button {
     background-color: #4CAF50;
     color: white;
@@ -42,6 +63,7 @@ button:hover {
     background-color: #45a049;
 }
 
+/* List styling */
 ul {
     list-style-type: none;
     padding: 0;
