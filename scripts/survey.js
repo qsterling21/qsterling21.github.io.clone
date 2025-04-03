@@ -1,3 +1,5 @@
+// Updated survey.js with fixes for optional chaining issues and validation compatibility
+
 function addCourse() {
     const courseList = document.getElementById('courseList');
 
@@ -10,7 +12,7 @@ function addCourse() {
     const select = document.createElement('select');
     select.name = 'courseTaking';
     select.innerHTML = `
-        <option value="" disabled selected>Select a course</option>
+        <option value="" disabled hidden>Select a course</option>
         <option value="ITIS 3135">ITIS 3135</option>
         <option value="ITCS 3160">ITCS 3160</option>
         <option value="MATH 1241">MATH 1241</option>
@@ -48,7 +50,6 @@ function addCourse() {
     wrapper.appendChild(deleteBtn);
 
     wrapper.style.marginBottom = '20px';
-
     courseList.appendChild(wrapper);
 }
 
@@ -70,9 +71,13 @@ document.getElementById('introForm').addEventListener('submit', function (e) {
     const courseItems = document.querySelectorAll('.course-item');
     let courseListHTML = "";
     courseItems.forEach((item, index) => {
-        const selectedCourse = item.querySelector('select')?.value || '';
-        const courseTitle = item.querySelector('input[name="courseTitle"]')?.value || '';
-        const courseDesc = item.querySelector('textarea[name="courseDescription"]')?.value || '';
+        const selectedEl = item.querySelector('select');
+        const titleEl = item.querySelector('input[name="courseTitle"]');
+        const descEl = item.querySelector('textarea[name="courseDescription"]');
+
+        const selectedCourse = selectedEl ? selectedEl.value : '';
+        const courseTitle = titleEl ? titleEl.value : '';
+        const courseDesc = descEl ? descEl.value : '';
 
         if (selectedCourse || courseTitle || courseDesc) {
             courseListHTML += `
