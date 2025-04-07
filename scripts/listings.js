@@ -1,10 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function () {
     function loadListings() {
         $.ajax({
-            url: 'api/listings', // API endpoint
+            url: 'api/listings', // Replace with your actual API endpoint or JSON path
             type: 'GET',
-            success: function(listings) {
-                const listingsHtml = listings.map(listing => `
+            success: function (listings) {
+                const listingsHtml = listings.map((listing) => `
                     <div class="listing">
                         <h4>${listing.name}</h4>
                         <p>${listing.description}</p>
@@ -13,16 +13,16 @@ $(document).ready(function() {
                 `).join('');
                 $('#listings-container').html(listingsHtml);
             },
-            error: function() {
+            error: function () {
                 $('#listings-container').html('<p>Unable to load listings.</p>');
             }
         });
     }
 
-    function viewListingDetails(listingId) {
-        console.log(`Viewing details for listing ${listingId}`);
-        // Logic to view details
-    }
-
     loadListings();
 });
+
+// Example helper function for the button (optional)
+function viewListingDetails(id) {
+    alert("Showing details for listing ID: " + id);
+}
