@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/map.css"> <!-- Link to your CSS file --> 
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="scripts/map.js" defer></script>
+    <script src="/scripts/map.js" defer></script>
     <style>
         #map {
             height: 400px;
@@ -63,11 +63,12 @@
                 {lat: 35.8437, lng: -78.6438, name: "Renaissance Raleigh"} // Raleigh North Hills
             ];
 
-            hotels.forEach(hotel => {
-                L.marker([hotel.lat, hotel.lng]).addTo(map)
-                    .bindPopup(`<b>${hotel.name}</b>`)
-                    .on('click', () => console.log(`Marker for ${hotel.name} clicked!`));
+            hotels.forEach((hotel) => {
+            L.marker([hotel.lat, hotel.lng]).addTo(map)
+                .bindPopup(`<b>${hotel.name}</b>`)
+                .on('click', () => console.log(`Marker for ${hotel.name} clicked!`));
             });
+
         });
     </script>
 </body>

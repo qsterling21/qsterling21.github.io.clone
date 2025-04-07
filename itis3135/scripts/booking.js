@@ -1,12 +1,11 @@
 $(document).ready(function () {
-
-    // Validates that an email address is in a proper format.
+    //  Validate email format
     function validateEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email.toLowerCase());
     }
 
-    // Validates the form input fields including name, email, and dates.
+    //  Validate form input before submitting
     function validateForm() {
         const name = $("#name").val().trim();
         const email = $("#email").val().trim();
@@ -25,7 +24,7 @@ $(document).ready(function () {
         return true;
     }
 
-    // Retrieves the value of a specific query parameter from the URL.
+    //  Helper: get query parameter value from URL
     function getQueryVariable(variable) {
         const query = window.location.search.substring(1);
         const vars = query.split("&");
@@ -39,18 +38,18 @@ $(document).ready(function () {
         return null;
     }
 
-    // Pre-fills the hotel select dropdown if a query parameter is present.
+    //  Pre-fill hotel selection from query string
     const hotel = getQueryVariable("hotel");
     if (hotel) {
         $("#hotel-select").val(hotel);
     }
 
-    // Handles the form submission process, including validation and confirmation message.
+    //  Handle form submission
     $("#booking-form").submit(function (event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent reload
 
         if (validateForm()) {
-            $(this).hide();
+            $(this).hide(); // Hide form on success
 
             $("main").append(`
                 <div id="confirmation" style="padding: 10px; background-color: #f4f4f4; border: 1px solid #ccc; margin-top: 20px; text-align: center;">
@@ -59,16 +58,14 @@ $(document).ready(function () {
                 </div>
             `);
 
-            // Allows the user to cancel the booking confirmation and reset the form.
+            //  Cancel button clears confirmation
             $("#cancelBooking").click(function () {
                 $("#confirmation").remove();
                 $("#booking-form").show();
                 $("#booking-form")[0].reset();
             });
-
         } else {
             alert("Please fill in all required fields with valid information.");
         }
     });
-
 });
