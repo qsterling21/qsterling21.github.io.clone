@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {lat: 35.8437, lng: -78.6438, name: "Renaissance Raleigh"}
     ];
 
-    // Add markers to the map
+    // markers to the map
     hotels.forEach((hotel) => {
         L.marker([hotel.lat, hotel.lng]).addTo(map)
             .bindPopup(`<b>${hotel.name}</b>`)
