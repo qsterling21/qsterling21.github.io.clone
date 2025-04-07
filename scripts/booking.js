@@ -45,6 +45,12 @@ $(document).ready(function () {
         }
     });
 
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email.toLowerCase());
+    }
+
+
     // Form validation
     function validateForm() {
         const name = $("#name").val().trim();
