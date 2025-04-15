@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slideshow - Qwan Sterling</title>
+  <link rel="stylesheet" href="styles/default.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <script src="scripts/listings.js" defer></script>
+</head>
+<body>
+
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <h2>Qwan Sterling’s Name Slideshow</h2>
+    <p>Each image represents a letter from my full name.</p>
+
+    <div class="slideshow-container">
+      <div class="main-slide">
+        <img id="mainImage" src="images/quilt.jpeg" alt="Q - Quilt" style="width:100%; max-height:500px; object-fit:cover;">
+        <p id="caption">Q - for Quilt</p>
+      </div>
+
+      <div class="thumbnails" style="display:flex; flex-wrap:wrap; gap:10px; margin-top:20px;">
+        <img src="images/quilt.jpeg" alt="Q - Quilt" onclick="showSlide(0)" style="width:80px; cursor:pointer;">
+        <img src="images/waterfall.jpeg" alt="W - Waterfall" onclick="showSlide(1)" style="width:80px; cursor:pointer;">
+        <img src="images/airplane.jpeg" alt="A - Airplane" onclick="showSlide(2)" style="width:80px; cursor:pointer;">
+        <img src="images/newspaper.jpeg" alt="N - Newspaper" onclick="showSlide(3)" style="width:80px; cursor:pointer;">
+        <img src="images/soccer.jpeg" alt="S - Soccer Ball" onclick="showSlide(4)" style="width:80px; cursor:pointer;">
+        <img src="images/train.jpeg" alt="T - Train" onclick="showSlide(5)" style="width:80px; cursor:pointer;">
+        <img src="images/eagle.jpeg" alt="E - Eagle" onclick="showSlide(6)" style="width:80px; cursor:pointer;">
+        <img src="images/rainbow.jpeg" alt="R - Rainbow" onclick="showSlide(7)" style="width:80px; cursor:pointer;">
+        <img src="images/lighthouse.jpeg" alt="L - Lighthouse" onclick="showSlide(8)" style="width:80px; cursor:pointer;">
+        <img src="images/icecream.jpeg" alt="I - Ice Cream" onclick="showSlide(9)" style="width:80px; cursor:pointer;">
+        <img src="images/notebook.jpeg" alt="N - Notebook" onclick="showSlide(10)" style="width:80px; cursor:pointer;">
+        <img src="images/guitar.jpeg" alt="G - Guitar" onclick="showSlide(11)" style="width:80px; cursor:pointer;">
+      </div>
+    </div>
+
+    <section style="margin-top: 40px;">
+      <h3>AI Prompts & Credits</h3>
+      <ul>
+        <li>Q - "Colorful quilt on a bed, landscape photo" - Bing Image Creator</li>
+        <li>W - "A waterfall in the forest, misty landscape view" - DALL·E</li>
+        <li>A - "Airplane flying in a blue sky, landscape format" - DALL·E</li>
+        <li>N - "Newspaper on a desk, landscape" - DALL·E</li>
+        <li>S - "Soccer ball on green field, landscape photo" - Bing Image Creator</li>
+        <li>T - "Train riding countryside tracks, wide view" - DALL·E</li>
+        <li>E - "Bald eagle flying over mountains" - Bing Image Creator</li>
+        <li>R - "Bright rainbow over green hills, sunny" - DALL·E</li>
+        <li>L - "Lighthouse near the ocean cliff, daytime" - Bing Image Creator</li>
+        <li>I - "Ice cream cone in sunlight, outdoors" - DALL·E</li>
+        <li>N - "Notebook with pen on desk, wide angle" - DALL·E</li>
+        <li>G - "Acoustic guitar resting against a wall" - Bing Image Creator</li>
+      </ul>
+    </section>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+
+  <script src="scripts/slideshow.js"></script>
+  <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
