@@ -154,3 +154,8 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+.secondary-nav {
+    text-align: center;
+  }
+  
