@@ -15,12 +15,13 @@ header, footer {
     padding: 10px 0;
 }
 
-/* Simple Horizontal Nav Bar- QTS*/
+/* Simple Horizontal Nav Bar - Always Horizontal */
 nav.simple-nav {
-    background-color: #222;        
+    background-color: #222;
+    text-align: center;
     padding: 10px 0;
     font-weight: bold;
-    white-space: nowrap;          
+    white-space: nowrap;
 }
 
 nav.simple-nav span {
@@ -37,7 +38,6 @@ nav.simple-nav a {
 nav.simple-nav a:hover {
     text-decoration: underline;
 }
-
 
 /* Listings Box Style */
 .listing-item {
@@ -59,14 +59,49 @@ nav.simple-nav a:hover {
     line-height: 1.5;
 }
 
-/* Responsive Nav (optional for smaller screens) */
-@media (max-width: 768px) {
-    nav.simple-nav a {
-        display: block;
-        padding: 10px 0;
-    }
+/* Main Content Styling */
+main {
+    padding: 20px;
+}
 
-    nav.simple-nav {
-        padding: 15px 0;
-    }
+section {
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button Styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Message Styling */
+#message {
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
 }

@@ -1,113 +1,107 @@
-
-
-/* Typography */
+/* Base Reset and Body Style */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    padding: 20px;
     margin: 0;
+    padding: 0;
+    background: #f4f4f4;
 }
 
-.heading-1 {
-    font-size: 2rem;
-    color: #0056b3;
-    margin-bottom: 10px;
-}
-
-.heading-2 {
-    font-size: 1.5rem;
-    color: #0056b3;
-    margin-bottom: 10px;
-}
-
-.heading-3 {
-    font-size: 1.2rem;
-    color: #0056b3;
-    margin-bottom: 10px;
-}
-
-p {
-    margin-bottom: 10px;
-}
-
-/* Header and Navigation */
-header {
+/* Header and Footer Styling */
+header, footer {
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
     text-align: center;
+    padding: 10px 0;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+/* Simple Horizontal Nav Bar - Always Horizontal */
+nav.simple-nav {
+    background-color: #222;
+    text-align: center;
+    padding: 10px 0;
     font-weight: bold;
+    white-space: nowrap;
 }
 
-nav ul li .active,
-nav ul li a:hover {
+nav.simple-nav span {
+    display: inline;
+}
+
+nav.simple-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+nav.simple-nav a:hover {
     text-decoration: underline;
 }
 
-/* Main Content */
-main {
-    margin-top: 20px;
-}
-
-/* Map Container */
-#map {
-    height: 500px;
-    width: 100%;
-    border: 1px solid #ccc;
+/* Listings Box Style */
+.listing-item {
     margin: 20px 0;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Forms and Buttons */
-input[type="text"],
-input[type="email"],
-input[type="date"],
-select {
+/* Section Titles */
+.section-heading {
+    color: #007bff;
+}
+
+/* Listing Paragraphs */
+.listing-item p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
     width: 100%;
     padding: 8px;
-    margin: 10px 0;
+    margin-top: 5px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
+/* Button Styling */
 button {
-    background-color: #007bff;
+    background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #45a049;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+/* Message Styling */
+#message {
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
 }
-
