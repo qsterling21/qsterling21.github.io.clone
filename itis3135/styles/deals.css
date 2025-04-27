@@ -1,55 +1,42 @@
-/* General styling for deal cards */
-.deal {
-    background-color: #fff;
-    padding: 20px;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.listing-item {
+    margin: 20px 0;
+    padding: 15px;
+    background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 200px; /* Adjust based on content */
 }
 
-.deal-heading {
-    color: #0056b3;
+.section-heading {
+    color: #007bff;
 }
 
 
-.deal p {
-    font-size: 16px;
-    line-height: 1.5; /* Ensures text within deals is readable */
-}
-
-/* Styling for all buttons within deals */
-button {
-    background-color: #4CAF50; /* Green background for buttons */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #45a049; /* Darker green on hover for visual feedback */
-}
-
-button:focus {
-    outline: 2px dashed #222; /* or use box-shadow for more style */
-    outline-offset: 3px;
-}
-
-
-/* Responsive design adjustments */
-@media (max-width: 768px) {
-    .deal {
-        min-height: 150px; /* Smaller height on smaller screens */
-    }
-
-    button {
-        padding: 8px 16px; /* Slightly smaller padding for buttons on smaller screens */
-        font-size: 14px; /* Smaller font size for buttons */
-    }
+.listing-item p {
+    margin: 5px 0;
+    line-height: 1.5;
 }

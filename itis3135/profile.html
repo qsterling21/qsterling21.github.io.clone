@@ -1,88 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Profile</title>
-    <link rel="stylesheet" href="styles/profile.css"> <!-- Link to your CSS file -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Profile</title>
+  <link rel="stylesheet" href="styles/profile.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Your Profile</h1>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="listings.html">Listings</a></li>
-                <li><a href="booking.html">Book Accommodation</a></li>
-                <li><a href="map.html">Map View</a></li>
-                <li><a href="deals.html">Special Deals</a></li>
-                <li><a href="profile.html" class="active">Your Profile</a></li>
-                <li><a href="client.info.html">Our Client</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="personal-info">
-            <h2>Personal Information</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" value="John Doe">
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" value="john.doe@example.com">
+  <main>
+    <h1>Welcome to Your Profile</h1>
+    <p>Here you can manage your personal information and view your booking history.</p>
 
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" value="123-456-7890">
-                
-               
-                <button type="submit" id="submit-btn">Update Info</button>
-                <div id="message" style="display:none;">Update Complete!</div>
-            </form>
-        </section>
-        <section id="booking-history">
-            <h2>Booking History</h2>
-            <ul>
-                <li>Booking at The Durham Hotel - April 2023</li>
-                <li>Booking at The Ivey's Hotel - May 2023</li>
-                <li>Booking at Aloft Raleigh - June 2023</li>
-                <li>Booking at Hyatt Place Asheville - July 2023</li>
-                <li>Booking at Renaissance Raleigh North Hills Hotel - August 2023</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Sterling Digital Solutions. All rights reserved.</p>
-        <p>
-            <a href="https://validator.w3.org/check?uri=referer" target="_blank">
-                <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML!" height="31" width="88" />
-            </a>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
-                <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" height="31" width="88" />
-            </a>
-        </p>
-        
-        Validate HTML: <a href="https://validator.w3.org/" target="_blank">HTML Validator</a><br>
-        Validate CSS: <a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS Validator</a>    
-    </footer>
-    <script>
-        $(document).ready(function() {
-            $('form').submit(function(event) {
-                event.preventDefault(); // Stop form from submitting normally
+    <section id="personal-info">
+      <h2>Personal Information</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="John Doe" />
 
-                // Example validation: check if the name field is not empty
-                if ($('#name').val().trim() !== '') {
-                    $('#message').show(); // Show the complete message
-                    setTimeout(function() {
-                        $('#message').fadeOut(); // Optionally hide the message after 3 seconds
-                    }, 3000);
-                    console.log('Form submission logic goes here.');
-                } else {
-                    alert('Name field cannot be empty.'); // Basic validation failure message
-                }
-            });
-        });
-    </script>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="john.doe@example.com" />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" value="123-456-7890" />
+
+        <button type="submit" id="submit-btn">Update Info</button>
+        <div id="message" style="display: none;">Update Complete!</div>
+      </form>
+    </section>
+
+    <section id="booking-history">
+      <h2>Booking History</h2>
+      <ul>
+        <li>Booking at The Durham Hotel - April 2023</li>
+        <li>Booking at The Ivey's Hotel - May 2023</li>
+        <li>Booking at Aloft Raleigh - June 2023</li>
+        <li>Booking at Hyatt Place Asheville - July 2023</li>
+        <li>Booking at Renaissance Raleigh North Hills Hotel - August 2023</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+
+  <script src="scripts/include.js"></script>
+  <script src="scripts/profile.js"></script>
 </body>
 </html>

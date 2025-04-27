@@ -9,20 +9,11 @@
 </head>
 <body>
     <header>
-        <h1>Special Deals for Traveling Nurses</h1>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="listings.html">Listings</a></li>
-                <li><a href="booking.html">Book Accommodation</a></li>
-                <li><a href="map.html">Map View</a></li>
-                <li><a href="deals.html" class="active">Special Deals</a></li>
-                <li><a href="profile.html">Your Profile</a></li>
-                <li><a href="client.info.html">Our Client</a></li>
-            </ul>
-        </nav>
+        <div data-include="components/header.html"></div>
     </header>
 
+    <h2>Special Deals for Traveling Nurses</h2>
+    <p>Check out our latest deals and discounts on accommodations for traveling nurses.</p>
     <main>
         <section id="deals">
             <div class="deal">
@@ -41,15 +32,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Traveling Nurses Accommodation Finder. All rights reserved.</p>
-        <p>
-            <a href="https://validator.w3.org/check?uri=referer" target="_blank">
-                <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML!" height="31" width="88" />
-            </a>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
-                <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" height="31" width="88" />
-            </a>
-        </p>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.min.js"></script>
     </footer>
 
     <!-- Link to your JavaScript file for deals -->

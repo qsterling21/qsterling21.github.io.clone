@@ -11,19 +11,11 @@
 </head>
 <body>
     <header>
-        <h1>Book Your Accommodation</h1>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="listings.html">Listings</a></li>
-                <li><a href="booking.html" class="active">Book Accommodation</a></li>
-                <li><a href="map.html">Map View</a></li>
-                <li><a href="deals.html">Special Deals</a></li>
-                <li><a href="profile.html">Your Profile</a></li>
-                <li><a href="client.info.html">Our Client</a></li>
-            </ul>
-        </nav>
+        <div data-include="components/header.html"></div>
     </header>
+
+    <h2>Book Your Accommodation</h2>
+    <p>Fill out the form below to book your accommodation.</p>
 
     <main>
         <form id="booking-form" action="#" method="post">
@@ -72,19 +64,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Traveling Nurses Accommodation Finder. All rights reserved.</p>
-        <p>
-            <a href="https://validator.w3.org/check?uri=referer" target="_blank">
-                <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML!" height="31" width="88" />
-            </a>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
-                <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" height="31" width="88" />
-            </a>
-        </p>
-        <p>
-            Validate HTML: <a href="https://validator.w3.org/" target="_blank">HTML Validator</a><br />
-            Validate CSS: <a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS Validator</a>
-        </p>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.min.js"></script>
     </footer>
 
     <!-- Fix the === operator warning -->

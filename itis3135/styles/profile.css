@@ -1,79 +1,72 @@
-/* Apply box-sizing safely */
-html {
-    box-sizing: border-box;
-}
-
-body, section, form, input, button, div, p, h1, h2, h3, h4, h5, h6,
-::before, ::after {
-    box-sizing: inherit;
-}
-
-/* Base styling */
+/* Base Reset and Body Style */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-}
-
-/* Profile section card */
-section {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 700px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Form styling */
-form {
-    max-width: 600px;
-    margin: auto;
-}
-
-form label {
-    display: block;
-    margin-top: 10px;
-}
-
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"] {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-/* Button styling */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    margin-top: 20px;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-/* List styling */
-ul {
-    list-style-type: none;
+    line-height: 1.6;
+    margin: 0;
     padding: 0;
+    background: #f4f4f4;
 }
 
-ul li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+/* Header and Footer Styling */
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
 }
 
-ul li:last-child {
-    border-bottom: none;
+/* Simple Horizontal Nav Bar- QTS*/
+nav.simple-nav {
+    background-color: #222;        
+    padding: 10px 0;
+    font-weight: bold;
+    white-space: nowrap;          
+}
+
+nav.simple-nav span {
+    display: inline;
+}
+
+nav.simple-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+nav.simple-nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Listings Box Style */
+.listing-item {
+    margin: 20px 0;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Section Titles */
+.section-heading {
+    color: #007bff;
+}
+
+/* Listing Paragraphs */
+.listing-item p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* Responsive Nav (optional for smaller screens) */
+@media (max-width: 768px) {
+    nav.simple-nav a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    nav.simple-nav {
+        padding: 15px 0;
+    }
 }
