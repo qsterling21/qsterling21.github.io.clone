@@ -1,4 +1,4 @@
-// Updated survey.js with fixes for optional chaining issues and validation compatibility
+
 
 function addCourse() {
     const courseList = document.getElementById('courseList');

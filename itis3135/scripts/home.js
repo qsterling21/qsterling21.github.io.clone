@@ -2,7 +2,7 @@ $(document).ready(function() {
     // Function to load featured listings dynamically
     function loadFeaturedListings() {
         $.ajax({
-            url: 'data/featured_listings.json',  // Ensure this URL correctly points to your JSON file
+            url: 'data/featured_listings.json',  
             method: 'GET',
             type: 'GET',
             dataType: 'json',
