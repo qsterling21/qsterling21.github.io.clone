@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Traveling Nurses Accommodation Finder</title>
+  <link rel="stylesheet" href="styles/profile.css">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <div data-include="components/header_project.html"></div>
+  </header>
+
+  <main>
+    <h1>Contact Us</h1>
+    <p>Have questions or want to leave a testimonial? Fill out the form below and we’ll get back to you!</p>
+
+    <form id="contactForm">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p id="thankYouMessage" style="display: none; color: green; font-weight: bold;">
+      Thank you for your review!
+    </p>
+
+    <p>You can also email us directly at <a href="mailto:info@travelnursefinder.com">info@travelnursefinder.com</a>.</p>
+  </main>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+
+  <script src="scripts/HTMLInclude.min.js"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      document.getElementById('thankYouMessage').style.display = 'block'; // Show thank you
+      this.reset(); 
+    });
+  </script>
+
+</body>
+</html>
