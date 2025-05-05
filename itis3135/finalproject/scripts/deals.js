@@ -1,6 +1,18 @@
 // deals.js (Static version/ QTS)
 
 $(document).ready(function () {
+    // Function to create HTML for each deal
+    function createDealHtml(deal) {
+        return `
+            <div class="deal">
+                <h3 class="deal-heading">${deal.title}</h3>
+                <p>${deal.description}</p>
+                <p><strong>Discount: ${deal.discount}%</strong></p>
+                <button class="book-btn" data-hotel="${deal.title}" data-discount="${deal.discount}">Book Now</button>
+            </div>
+        `;
+    }
+
     // Define static deals data
     const deals = [
         {
@@ -29,16 +41,4 @@ $(document).ready(function () {
         // Redirect with query parameters
         window.location.href = `booking.html?hotel=${encodeURIComponent(hotelName)}&discount=${encodeURIComponent(discount)}`;
     });
-
-    // Function to create deal HTML
-    function createDealHtml(deal) {
-        return `
-            <div class="deal">
-                <h3 class="deal-heading">${deal.title}</h3>
-                <p>${deal.description}</p>
-                <p><strong>Discount: ${deal.discount}%</strong></p>
-                <button class="book-btn" data-hotel="${deal.title}" data-discount="${deal.discount}">Book Now</button>
-            </div>
-        `;
-    }
 });
